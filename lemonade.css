@@ -29,9 +29,21 @@
   padding: 0.3em;
 }
 
+[class*='bit-'].nest {
+  padding: 0;
+}
+
 /* Floats last ".bit-" to the right */
 [class*='bit-']:last-of-type {
   float: right
+}
+
+.opposite [class*='bit-'] {
+  float: right;
+}
+
+.opposite [class*='bit-']:last-of-type {
+  float: left;
 }
 
 /* Clearfix */
@@ -54,6 +66,9 @@
 .bit-10 { width: 10% }
 .bit-11 { width: 9.09090909091% }
 .bit-12 { width: 8.33% }
+.bit-75 { width: 75%; }
+.bit-50 { width: 50%; }
+.bit-25 { width: 25%; }
 
 /* Landscape mobile & down */
 @media (max-width: 30em) {
@@ -69,6 +84,11 @@
   .bit-10,
   .bit-11,
   .bit-12 {
+    width: 100%;
+  }
+  .bit-75,
+  .bit-50,
+  .bit-25 {
     width: 100%;
   }
 }
@@ -92,6 +112,7 @@
   .bit-11 {
     width: 100%
   }
+
 }
 
 /* Landscape to small desktop */
@@ -106,5 +127,14 @@
   .bit-10,
   .bit-12 {
     width: 50%
+  }
+  .bit-75 {
+    width: 75%;
+  }
+  .bit-50 {
+    width: 50%;
+  }
+  .bit-25 {
+    width: 25%;
   }
 }
